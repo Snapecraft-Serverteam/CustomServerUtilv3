@@ -1,0 +1,26 @@
+name: CustomServerUtilv3
+authors: [realmayus, Tallerik]
+version: 1.0
+main: net.snapecraft.customserverutil_v3.CustomServerUtilv3
+commands:
+  c:
+    description: Creative Mode
+  s:
+    description: Survival Mode
+  sp:
+    description: Spectator Mode
+  sethome:
+    description: Setzt ein Home.
+    usage: "/sethome <name>"
+  home:
+    description: Teleportiert dich zum angegebenen Home.
+    usage: "/home <name>"
+  tpa:
+    description: Sendet eine Teleport-Anfrage an den angegebenen Spieler.
+    usage: "/tpa <player>"
+  tpaccept:
+    description: Akzeptiert eine Teleport-Anfrage des angegebenen Spielers.
+    usage: "/tpaccept <player>"
+  tpdecline:
+    description: Lehnt eine Teleport-Anfrage eines Spielers ab.
+    usage: "/tpdecline <player>"
