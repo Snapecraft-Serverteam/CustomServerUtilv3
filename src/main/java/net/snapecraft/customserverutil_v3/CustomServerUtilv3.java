@@ -69,8 +69,11 @@ public class CustomServerUtilv3 extends JavaPlugin {
         getCommand("sp").setExecutor(new GameModeCMD());
 
        getCommand("sun").setExecutor(new SunCMD());
-//        getCommand("day").setExecutor(new Day());
-//        getCommand("rlcfg").setExecutor(new RlCFGCMD());
+       getCommand("day").setExecutor(new DayCMD());
+       getCommand("night").setExecutor(new NightCMD());
+
+       getCommand("heal").setExecutor(new HealCMD());
+       getCommand("fly").setExecutor(new FlyCMD());
 //
 //        getCommand("server").setExecutor(new ServerHandlerCMD());
 //        getCommand("ban").setExecutor(new Banmanager());
