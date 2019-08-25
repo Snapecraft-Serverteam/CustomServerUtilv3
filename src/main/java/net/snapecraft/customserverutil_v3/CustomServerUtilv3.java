@@ -1,6 +1,7 @@
 package net.snapecraft.customserverutil_v3;
 
 import net.snapecraft.customserverutil_v3.commands.*;
+import net.snapecraft.customserverutil_v3.listener.JoinListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import sun.security.provider.Sun;
 
@@ -29,10 +30,24 @@ public class CustomServerUtilv3 extends JavaPlugin {
                 "                                                        __/ |            \n" +
                 "                                                       |___/             \n\n\n");
 
+        registerConfig();
         registerCommands();
         registerListeners();
 
         super.onEnable();
+    }
+
+    private void registerConfig() {
+        saveConfig();
+        reloadConfig();
+        getConfig().addDefault("joinmsg", true);
+        getConfig().addDefault("jointxt", "&7[&a+&7]&2 PLAYERNAME");
+        getConfig().addDefault("leavemsg", true);
+        getConfig().addDefault("leavetxt", "&7[&c-&7]&2 PLAYERNAME");
+
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+        reloadConfig();
     }
 
 
@@ -86,6 +101,6 @@ public class CustomServerUtilv3 extends JavaPlugin {
     }
 
     private void registerListeners() {
-
+        getServer().getPluginManager().registerEvents(new JoinListener(), this);
     }
 }
