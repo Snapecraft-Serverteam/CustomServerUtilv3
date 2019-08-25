@@ -35,3 +35,14 @@ commands:
     description: Macht es Nacht
   heal:
     description: Heilt dich
+  warp:
+    description: Teleportiert dich an einen festgelegten punkt
+    usage: "/warp <Warp Name>"
+  setwarp:
+    description: Setzt einen Warp punkt.
+   removewarp:
+     description: Löscht einen Warp punkt
+   spawn:
+     description: Bringt dich zum Spawn
+   build:
+     description: Lässt dich in der sicherheits Zone abbauen

@@ -74,37 +74,13 @@ public class CustomServerUtilv3 extends JavaPlugin {
 
        getCommand("heal").setExecutor(new HealCMD());
        getCommand("fly").setExecutor(new FlyCMD());
-//
-//        getCommand("server").setExecutor(new ServerHandlerCMD());
-//        getCommand("ban").setExecutor(new Banmanager());
-//        getCommand("warn").setExecutor(new WarnHandler());
-//        getCommand("pardon").setExecutor(new PardonHandler());
-//        getCommand("sendmail").setExecutor(new SendMailCMD());
-//        getCommand("mail").setExecutor(new MailCMD());
-//        getCommand("nick").setExecutor(new Nick());
-//        getCommand("ping").setExecutor(new PingCMD());
-//        getCommand("warp").setExecutor(new WarpCMD());
-//        getCommand("setwarp").setExecutor(new SetWarpCMD());
-//        getCommand("removewarp").setExecutor(new RemoveWarpCMD());
-//        getCommand("spawn").setExecutor(new SpawnCMD());
-//        getCommand("tpa").setExecutor(new SendTpaCMD());
-//        getCommand("tpaccept").setExecutor(new AcceptTpaCMD());
-//        getCommand("tpdecline").setExecutor(new DeclineTpaCMD());
-//        getCommand("report").setExecutor(new reportAdminCMD());
-//        getCommand("spectateplayer").setExecutor(new SpectateThatPlayerCMD());
-//        getCommand("build").setExecutor(new BuildModeCMD());
-//        getCommand("friend").setExecutor(new friendsCMD());
-//        getCommand("v").setExecutor(new Vanish());
-//        getCommand("lobby").setExecutor(new LobbyCMD());
-//        getCommand("money").setExecutor(new GetMoneyCMD());
-//        getCommand("setmoney").setExecutor(new SetMoneyCMD());
-//        getCommand("transfer").setExecutor(new MoneyTransfer());
-//        getCommand("msg").setExecutor(new MsgCMD());
-//        getCommand("r").setExecutor(new ReplyCMD());
-//        getCommand("sell").setExecutor(new SellCMD());
-//        getCommand("ddos").setExecutor(new DdosCmd());
-//        getCommand("setlang").setExecutor(new setLanguageCMD());
-//        getCommand("force").setExecutor(new ForceCMD());
+
+
+        getCommand("warp").setExecutor(new WarpCMD());
+        getCommand("setwarp").setExecutor(new SetWarpCMD());
+        getCommand("removewarp").setExecutor(new RemoveWarpCMD());
+        getCommand("spawn").setExecutor(new SpawnCMD());
+
     }
 
     private void registerListeners() {
