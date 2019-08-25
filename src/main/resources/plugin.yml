@@ -34,4 +34,4 @@ commands:
   night:
     description: Macht es Nacht
   heal:
-    description Heilt dich
+    description: Heilt dich
