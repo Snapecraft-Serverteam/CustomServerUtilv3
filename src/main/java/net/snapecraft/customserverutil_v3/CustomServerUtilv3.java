@@ -2,6 +2,7 @@ package net.snapecraft.customserverutil_v3;
 
 import net.snapecraft.customserverutil_v3.commands.*;
 import net.snapecraft.customserverutil_v3.listener.JoinListener;
+import net.snapecraft.customserverutil_v3.listener.QuitListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import sun.security.provider.Sun;
 
@@ -19,8 +20,11 @@ public class CustomServerUtilv3 extends JavaPlugin {
 
     public static final String noPerm = prefix + "§cDu hast nicht die nötige Berechtigung, um diesen Command auszuführen!";
 
+    public static CustomServerUtilv3 ins = null;
     @Override
     public void onEnable() {
+        ins = this;
+
         System.out.println("\n\n\n                _                  _       _     _                 _____ \n" +
                 "               | |                | |     | |   | |               |____ |\n" +
                 "  ___ _   _ ___| |_ ___  _ __ ___ | | ___ | |__ | |__  _   ___   __   / /\n" +
@@ -102,5 +106,9 @@ public class CustomServerUtilv3 extends JavaPlugin {
 
     private void registerListeners() {
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        getServer().getPluginManager().registerEvents(new QuitListener(), this);
+    }
+    public static CustomServerUtilv3 getInstance() {
+        return ins;
     }
 }
