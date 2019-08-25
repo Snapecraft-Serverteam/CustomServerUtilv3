@@ -3,6 +3,7 @@ package net.snapecraft.customserverutil_v3;
 import net.snapecraft.customserverutil_v3.commands.*;
 import net.snapecraft.customserverutil_v3.listener.JoinListener;
 import net.snapecraft.customserverutil_v3.listener.QuitListener;
+import net.snapecraft.customserverutil_v3.warp.WarpProtection;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -74,6 +75,7 @@ public class CustomServerUtilv3 extends JavaPlugin {
 
        getCommand("heal").setExecutor(new HealCMD());
        getCommand("fly").setExecutor(new FlyCMD());
+       getCommand("build").setExecutor(new BuildModeCMD());
 
 
         getCommand("warp").setExecutor(new WarpCMD());
@@ -86,6 +88,7 @@ public class CustomServerUtilv3 extends JavaPlugin {
     private void registerListeners() {
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
         getServer().getPluginManager().registerEvents(new QuitListener(), this);
+        getServer().getPluginManager().registerEvents(new WarpProtection(), this);
     }
     public static CustomServerUtilv3 getInstance() {
         return ins;

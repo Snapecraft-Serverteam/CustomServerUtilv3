@@ -1,6 +1,6 @@
 name: CustomServerUtilv3
 authors: [realmayus, Tallerik, Pepe44]
-version: 1.0
+version: 1.5
 main: net.snapecraft.customserverutil_v3.CustomServerUtilv3
 commands:
   c:
@@ -40,9 +40,9 @@ commands:
     usage: "/warp <Warp Name>"
   setwarp:
     description: Setzt einen Warp punkt.
-   removewarp:
-     description: Löscht einen Warp punkt
-   spawn:
-     description: Bringt dich zum Spawn
-   build:
-     description: Lässt dich in der sicherheits Zone abbauen
+  removewarp:
+    description: Löscht einen Warp punkt
+  spawn:
+    description: Bringt dich zum Spawn
+  build:
+    description: Lässt dich in der sicherheits Zone abbauen
