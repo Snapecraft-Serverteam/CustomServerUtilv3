@@ -4,7 +4,7 @@ import net.snapecraft.customserverutil_v3.commands.*;
 import net.snapecraft.customserverutil_v3.listener.JoinListener;
 import net.snapecraft.customserverutil_v3.listener.QuitListener;
 import org.bukkit.plugin.java.JavaPlugin;
-import sun.security.provider.Sun;
+
 
 public class CustomServerUtilv3 extends JavaPlugin {
 
@@ -68,7 +68,7 @@ public class CustomServerUtilv3 extends JavaPlugin {
         getCommand("c").setExecutor(new GameModeCMD());
         getCommand("sp").setExecutor(new GameModeCMD());
 
-//        getCommand("sun").setExecutor(new Sun());
+       getCommand("sun").setExecutor(new SunCMD());
 //        getCommand("day").setExecutor(new Day());
 //        getCommand("rlcfg").setExecutor(new RlCFGCMD());
 //
