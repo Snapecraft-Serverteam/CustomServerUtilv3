@@ -89,6 +89,10 @@ public class CustomServerUtilv3 extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
         getServer().getPluginManager().registerEvents(new QuitListener(), this);
         getServer().getPluginManager().registerEvents(new WarpProtection(), this);
+
+        if(getServer().getPluginManager().getPlugin("Reset") != null){
+
+        }
     }
     public static CustomServerUtilv3 getInstance() {
         return ins;

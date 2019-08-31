@@ -1,6 +1,7 @@
 package net.snapecraft.customserverutil_v3.listener;
 
 import net.snapecraft.customserverutil_v3.CustomServerUtilv3;
+import net.snapecraft.customserverutil_v3.warp.WarpCfg;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +19,7 @@ public class JoinListener implements Listener {
         } else {
             e.setJoinMessage("");
         }
-
+        e.getPlayer().teleport(WarpCfg.getWarpLoc("spawn"));
      }
 
 }
