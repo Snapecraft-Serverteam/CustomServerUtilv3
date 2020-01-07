@@ -10,6 +10,6 @@ Third revision of the beloved Subserver plugin of Snapecraft.net
 
 ## Planned Features
 - [ ] Allowing players to vanish themselves
-- [ ] commands for quick daytime setting
-- [ ] commands for quick weather setting
-- [ ] command for enabling flying
+- [ X ] commands for quick daytime setting
+- [ X ] commands for quick weather setting
+- [ X ] command for enabling flying
