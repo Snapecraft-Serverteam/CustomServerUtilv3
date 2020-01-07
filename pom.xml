@@ -47,6 +47,13 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>de.limacity.pepe44</groupId>
+            <artifactId>far</artifactId>
+            <version>1.0.0</version>
+            <systemPath>${project.basedir}/lib/Reset.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
 
     </dependencies>
 
