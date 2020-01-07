@@ -56,8 +56,10 @@ public class HomeCMD implements CommandExecutor {
                     HomeCFG.setHome(p, p.getLocation(), args[0]);
                     p.sendMessage( CustomServerUtilv3.getPrefix() + "§aHome §3" + args[0] + " §agesetzt.");
 
-                } if(p.hasPermission("CustomServerUtil.15homes")) {
+                } else if(p.hasPermission("CustomServerUtil.10homes")) {
                     if(HomeCFG.getHomeAmount(p) <= 10) {
+                        HomeCFG.setHome(p, p.getLocation(), args[0]);
+                        p.sendMessage( CustomServerUtilv3.getPrefix() + "§aHome §3" + args[0] + " §agesetzt.");
                     } else {
                         p.sendMessage(CustomServerUtilv3.getPrefix() + "§cTrotz deines §6Premium Rangs §cwurden deine maximalen Homes(10) erreicht. Zur Zeit ist aus Platzgründen leider nicht mehr möglich, sorry D:");
                     }
