@@ -1,12 +1,14 @@
 package net.snapecraft.customserverutil_v3.commands;
 
 import net.snapecraft.customserverutil_v3.CustomServerUtilv3;
-import net.snapecraft.customserverutil_v3.modules.config.PluginConfig;
 import net.snapecraft.customserverutil_v3.modules.home.HomeCFG;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
+
+import java.util.Set;
 
 public class HomeCMD implements CommandExecutor {
     @Override
@@ -15,7 +17,27 @@ public class HomeCMD implements CommandExecutor {
         if(command.getName().equalsIgnoreCase("home")) {
             if (args.length == 1) {
                 if (args[0].equalsIgnoreCase("list")) {
-
+                    ConfigurationSection list = HomeCFG.Config.getConfigurationSection("homes." + p.getPlayer());
+                    if(list == null) {
+                        // No homes
+                        p.sendMessage(CustomServerUtilv3.getPrefix() + "§cDu hast keine homes gesetzt.");
+                        return true;
+                    }
+                    Set<String> homes = list.getKeys(false);
+                    if(homes.size() == 0) {
+                        // No homes
+                        p.sendMessage(CustomServerUtilv3.getPrefix() + "§cDu hast keine homes gesetzt.");
+                        return true;
+                    }
+                    String homestr = "";
+                    int i = 0;
+                    for (String str : homes) {
+                        homestr = homestr + str;
+                        if(i < (homes.size() - 1)) {
+                            homestr = homestr + ", ";
+                        }
+                    }
+                    p.sendMessage(CustomServerUtilv3.getPrefix() + "§6Deine Homes§7: §a" + homestr);
                 } else {
                     if (HomeCFG.Config.get("homes." + p.getName() + "." + args[0] + ".X") != null) {
                         p.teleport(HomeCFG.getHomeLoc(p, args[0]));
